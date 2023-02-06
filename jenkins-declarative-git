@@ -1,0 +1,10 @@
+pipeline{
+   agent any
+   stages{
+       stage("Git checkout"){
+           steps{
+               git branch: 'main', credentialsId: 'github', url: 'https://github.com/Yogi8887/yogiTech-curd.git'
+           }
+       }
+   }
+}
